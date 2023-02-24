@@ -16,6 +16,7 @@ public class Practice01 {
         //http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html adresine gidiniz
         Driver.getDriver().get(ConfigReader.getProperty("dhtmlUrl"));
 
+
         //Tüm ülkeleri yazdırınız
         DhtmlPage obj = new DhtmlPage();
         for (WebElement w : obj.ulkeler) {
@@ -32,6 +33,7 @@ public class Practice01 {
                 dragAndDrop(obj.Rome,obj.Italy).
                 dragAndDrop(obj.Madrid,obj.Spain).
                 dragAndDrop(obj.Copenhagen,obj.Denmark).perform();
+        Driver.closeDriver();
     }
     /*
     --http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html adresine gidiniz
